@@ -1,0 +1,31 @@
+import time
+import random
+import matplotlib.pyplot as plt
+
+def plot_times(times):
+    plt.plot(times)
+    plt.ylabel('runtime')
+    plt.xlabel('size')
+    plt.show()
+
+def sum_values(values):
+    total = 0            
+    for value in values: 
+        total += value   
+    return total  
+
+def gen_input(length):
+    return [random.randint(-1000, 1000) for _ in range(length)]
+
+# add your code below 
+
+times = []
+for length in range(1,501):
+    values = gen_input(length)
+    start = time.time()
+    sum_values(values)
+    end = time.time()
+    runtime = end -start
+    times.append(runtime)
+    
+plot_times(times)
