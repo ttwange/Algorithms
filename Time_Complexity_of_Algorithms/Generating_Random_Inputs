@@ -1,0 +1,25 @@
+import time
+import random
+
+def maximum(values):
+    answer = None
+    for value in values:
+        if answer == None or answer < value:
+            answer = value
+    return answer
+
+def gen_input(length):
+    return [random.randint(-1000, 1000) for _ in range(length)]
+
+# add your code below 
+times = []
+for length in range(1,501):
+    values = gen_input(length)
+    start = time.time()
+    maximum (values) 
+    end = time.time()
+    runtime = end -start 
+    
+    times.append(times)
+    
+print(times)
