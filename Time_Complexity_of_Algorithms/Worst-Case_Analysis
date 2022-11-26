@@ -1,0 +1,11 @@
+def count_zeros(values):
+    count = 0            # c1
+    for value in values: # c2
+        if value == 0:   # c3
+            count += 1   # c4
+    return count         # c5
+
+model1 = '(c1 + c2) * N + (c3 + c4 + c5)'
+model2 = '(c2 + c3) * N + (c1 + c4 + c5)'
+model3 = '(c2 + c3 + c4) * N + (c1 + c5)'
+correct = model3
