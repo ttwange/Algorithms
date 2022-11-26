@@ -1,0 +1,12 @@
+def sum_pairs(values):
+    pair_sums = 0              # c1             
+    for x in values:           # c2     
+        for y in values:       # c3     
+            pair_sums += x + y # c4
+    return pair_sums           # c5
+
+model1 = '(c3 + c4) * N^2 + c2 * N + (c1 + c5)'
+model2 = 'c4 * N^2 + (c2 + c3) * N + (c1 + c5)'
+model3 = '(c2 + c3 + c4) * N^2 + (c1 + c5)'
+
+correct = model1
