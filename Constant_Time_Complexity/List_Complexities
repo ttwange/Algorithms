@@ -1,0 +1,28 @@
+def add_with_append(N):
+    values = []
+    for i in range(N):
+        values.append(i)
+    return values
+
+def add_with_insert(N):
+    values = []
+    for i in range(N):
+        values.insert(0, i)
+    return values
+
+# write code below
+
+import time
+
+start = time.time()
+add_with_append(50000)
+end = time.time()
+time_append = end -start
+
+start = time.time()
+add_with_insert(50000)
+end = time.time()
+time_insert = end -start
+
+print(time_insert)
+print(time_append)
