@@ -1,0 +1,30 @@
+import time
+ 
+def concat_with_add(word_list):
+    concat = ''
+    for word in word_list:
+        concat += word
+    return concat
+
+def concat_with_join(word_list):
+    return ''.join(word_list)
+
+print(random_strings[:5])
+word = random_strings[:5]
+# write code below
+
+
+import time
+
+start =time.time()
+concat_with_add(word)
+end = time.time()
+time_add = end - start
+
+start =time.time()
+concat_with_join(word)
+end = time.time()
+time_join = end - start
+
+print(time_join)
+print(time_add)
