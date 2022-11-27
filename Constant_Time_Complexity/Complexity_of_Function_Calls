@@ -1,0 +1,16 @@
+def sum_values(values):
+    total = 0            # 1
+    for value in values: # N
+        total += value   # N
+    return total         # 1
+
+def num_values(values):
+    total = 0            # 1
+    for _ in values:     # N
+        total += 1       # N
+    return total         # 1
+
+def average(values):
+    value_sum = sum_values(values)  # N
+    num_values = num_values(values) # N
+    return value_sum / num_values   # 1
