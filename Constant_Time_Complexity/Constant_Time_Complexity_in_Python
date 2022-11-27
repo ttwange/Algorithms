@@ -1,0 +1,15 @@
+def function1(N):
+    for i in range(N):
+        print(i)
+
+def function2():
+    for i in range(100000):
+        print(i)
+
+def function3(N):
+    for i in range(100000):
+        print(i) 
+        
+constant1 = False
+constant2 = True
+constant3 = True
