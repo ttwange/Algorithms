@@ -1,0 +1,23 @@
+N = 10
+M = 20
+
+list1 = [_ for i in range(0)]
+list2 = [i for i in range(3)]
+list3 = [i * i for i in range(M)]
+list4 = [[i + j for j in range(M)] for i in range(N)]
+list5 = [min(list4[i]) for i in range(N)]
+list6 = [i for i in range(1000)]
+
+complexity1 = 'O(1)'
+complexity2 = 'O(N)'
+complexity3 = 'O(M)'
+complexity4 = 'O(N + M)'
+complexity5 = 'O(N * M)'
+
+# Example answer for list1
+answer1 = complexity1 
+answer2 = complexity1
+answer3 = complexity3
+answer4 = complexity5
+answer5 = complexity5
+answer6 = complexity3
