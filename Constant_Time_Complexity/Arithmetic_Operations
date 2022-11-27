@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+
+def plot_times(times):
+    plt.plot(times)
+    plt.ylabel('multiplication runtime')
+    plt.xlabel('number of digits')
+    plt.yscale('log')
+    plt.yticks([])
+    plt.show()
+
+print(pairs[:5])
+# write code below
+import time
+times = []
+for x,y in pairs:
+    start = time.time()
+    x * y 
+    end = time.time()
+    runtime = end - start
+    times.append(runtime)
+
+plot_times(times)
