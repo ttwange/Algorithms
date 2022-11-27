@@ -1,0 +1,26 @@
+import time
+with open('random_words.txt', mode='r') as f:
+    word_list = f.readlines()
+
+def concat_with_add(word_list):
+    concat = ''
+    for word in word_list:
+        concat += word
+        temp = concat
+    return concat
+
+def concat_with_join(word_list):
+    return ''.join(word_list)
+
+start = time.time()
+concat_with_add(word_list)
+end = time.time()
+time_add = end - start
+
+start = time.time()
+concat_with_join(word_list)
+end = time.time()
+time_join = end - start
+    
+print(time_add)
+print(time_join)
