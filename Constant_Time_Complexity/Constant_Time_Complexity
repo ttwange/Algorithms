@@ -1,0 +1,9 @@
+def average(values):
+    average = 0
+    for value in values:
+        average += value
+    return average / len(values) 
+
+
+coefficients = [2,2]
+order = 'O(N)'
