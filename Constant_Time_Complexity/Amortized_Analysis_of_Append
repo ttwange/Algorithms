@@ -1,0 +1,36 @@
+import matplotlib.pyplot as plt
+
+def plot_costs(times):
+    plt.plot(times, label='append cost')
+    plt.ylabel('cost')
+    plt.xlabel('N')
+    plt.show()
+    
+def append_cost(array_length, list_length):
+    if array_length == list_length:
+        return array_length
+    return 1
+
+def append_N_list_cost(N):
+    array_length = 1 # initially the array will have length 1
+    list_length = 0 # initially the list has 0 elements
+    total_cost = 0 # this variable will keep track of the total cost
+    for i in range(N):
+        total_cost = append_cost(array_length, list_length)
+        total_cost += cost
+        # update the array and list lengths
+        if array_length == list_length:
+            array_length *= 2
+        list_length += 1
+    return total_cost
+
+# add you code below 
+
+
+costs = []
+
+for N in range(5000):
+    cost = append_N_list_cost(N)
+    costs.append(cost)
+    
+plot_costs(costs)
