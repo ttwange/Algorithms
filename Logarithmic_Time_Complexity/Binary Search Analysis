@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+
+def plot_list(values):
+    plt.plot(values)
+    plt.ylabel('number of divisions to reach 1')
+    plt.xlabel('N')
+    plt.margins(x=0.1, y=0.1)
+    plt.show()
+    
+def num_div_to_reach_1(N):
+    div_count = 0
+    while N > 1:
+        N /= 2
+        div_count += 1
+    return div_count
+
+# Add your code below
+num_div = []
+for N in range(1000):
+    values = num_div_to_reach_1(N)
+    num_div.append(values)
+    
+plot_list(num_div)
