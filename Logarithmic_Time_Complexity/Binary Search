@@ -1,0 +1,22 @@
+def binary_search(target):
+    range_start = 0
+    range_end = 63
+    while range_start < range_end:
+        range_middle = (range_end + range_start) // 2
+        value = ask(range_middle)
+        if value == target:
+            return range_middle
+        elif value < target:
+            # Discard the first half of the range
+            range_start = range_middle + 1
+        else:
+            # Discard the second half of the range
+            range_end = range_middle - 1
+    # At this point range_start = range_end
+    return range_start 
+
+# Add your code below
+
+index_32 = binary_search(32)
+
+answer(16)
