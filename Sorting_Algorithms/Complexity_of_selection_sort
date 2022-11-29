@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+def plot_values(values):
+    plt.plot(values, label='1+2+...+N', color='y')
+    plt.ylabel('1+2+...+N')
+    plt.xlabel('N')
+    plt.legend()
+    plt.show()
+    
+# Write your code below 
+sum_first_N = 0
+values = []
+for N in range(1,1001):
+    sum_first_N += N
+    values.append(sum_first_N)
+    
+plot_values(values)
