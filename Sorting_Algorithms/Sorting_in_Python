@@ -1,0 +1,4 @@
+values = [6, 8, 7, 4, 3, 5, 2, 1, 9] 
+sorted_values = sorted(values)
+
+sorted_values_reverse = sorted(values, reverse = True)
