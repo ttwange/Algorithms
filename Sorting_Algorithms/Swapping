@@ -1,0 +1,12 @@
+value_list = [1, 4, 5, 2, 3]
+i = 1
+j = 3
+
+def swap(values, i, j):
+    temp = values[i]
+    values[i] = values[j]
+    values[j] = temp
+    
+swap(value_list,i,j)
+
+print(value_list)
