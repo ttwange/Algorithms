@@ -1,0 +1,8 @@
+# Variable values is avaiable 
+values_formula = []
+for N in range(1,1001):
+    R = (N**2/2) + (N/2)
+    values_formula.append(R)
+    
+if values == values_formula:
+    print(True)
