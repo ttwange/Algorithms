@@ -1,0 +1,18 @@
+# Provided input
+test_values = [1, 2, 5]
+test_targets = [2, 3, 7, 8]      
+# Expected output: 
+# ({2: True, 3: True, 7: True, 8: False}, {2, 3, 4, 6, 7, 10})
+
+# Write your code below
+def find_sums_precompute(values, target_sums):
+    possible_sums = set()
+    for x in values:
+        for y in values:
+            possible_sums.add(x + y)
+    sums = {}
+    for target in target_sums:
+        sums[target] = target in possible_sums
+    return sums,possible_sums
+
+print(find_sums_precompute(test_values, test_targets))
