@@ -1,0 +1,26 @@
+class Person():
+    
+    def __init__(self, name, age):
+        self.name = name     
+        self.age = age      
+
+import csv
+def read_persons():
+    persons = []
+    with open('persons.csv') as f:
+        next(f)
+        rows = list(csv.reader(f))
+        for row in rows:
+            person = Person(row[0], int(row[1]))
+            persons.append(person)
+    return persons
+
+# proposed complexities
+space_complexity1 = 'O(P)'
+space_complexity2 = 'O(P + L)'
+space_complexity3 = 'O(P * L)'
+space_complexity4 = 'O(L)'
+
+# Assign the space complexity of read_persons() to answer
+
+answer = space_complexity3
