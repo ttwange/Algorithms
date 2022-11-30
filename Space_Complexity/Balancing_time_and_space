@@ -1,0 +1,19 @@
+ # Provided input
+test_values = [1, 2, 5]
+test_targets = [2, 3, 7, 8]      
+# Expected output: 
+# ({2: True, 3: True, 7: True, 8: False}, {1, 2, 5})
+
+# Write your code below
+def  find_sums_balanced(values, target_sums):
+    value_set=set(values)
+    sums = {}
+    for target in target_sums:
+        sums[target] = False
+        for value1 in values:
+            value2 = target-value1
+            if value2 in value_set:
+                sums[target] =  True
+    return sums,value_set
+
+find_sums_balanced(test_values, test_targets)
