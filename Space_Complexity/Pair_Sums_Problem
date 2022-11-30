@@ -1,0 +1,18 @@
+# Provided input
+test_values = [1, 2, 5]
+test_targets = [2, 3, 7, 8]      
+# Expected output:
+# {2: True, 3: True, 7: True, 8: False}
+
+# Write your code below
+def find_sums(values, target_sums):
+    sums = {}
+    for target in target_sums:
+        sums[target] = False
+        for x in values:
+            for y in values:
+                if x+y == target:
+                    sums[target] = True
+    return sums
+
+find_sums(test_values, test_targets)
