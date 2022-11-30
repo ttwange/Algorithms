@@ -1,0 +1,17 @@
+def make_table2(N):
+    table = []
+    for _ in range(N):
+        row = []
+        for _ in range(N):
+            row.append([1 for _ in range(N)])
+        table.append(row)
+    return table
+
+# Proposed complexities
+space_complexity1 = 'O(N)'
+space_complexity2 = 'O(N^2)'
+space_complexity3 = 'O(N^3)'
+
+# Assign the space complexity of make_table2() to answer
+
+answer = space_complexity3
