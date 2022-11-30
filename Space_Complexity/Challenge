@@ -1,0 +1,24 @@
+
+def find_sums_distinct(values, target_sums):
+    # Convert the value into a set
+    value_set = set(values)
+    sums = {}
+    # Lookup the value
+    for target in target_sums:
+        sums[target] = False
+        for value1 in values:
+            value2 = target - value1
+            if value1 != value2 and value2 in value_set:
+                sums[target] = True
+    return sums
+
+
+# Provided input
+values = [1, 2, 5]
+targets = [2, 3, 7, 8]      
+# Expected output: 
+# {2: False, 3: True, 7: True, 8: False}
+
+# Write your code below
+
+find_sums_distinct(values, targets)
