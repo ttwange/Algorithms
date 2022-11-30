@@ -1,0 +1,20 @@
+# Provided input
+test_values = [4, 6, 3, 9, 1]
+test_targets = [9, 0, 3]      
+# Expected output: {9: True, 0: False, 3: True}
+
+# Write your code below
+def find_targets_faster(values, targets):
+    value_set = set(values)
+    found = {}
+    
+    for target in targets:
+        if target in value_set:
+            found[target] = True
+        else:
+            found[target] = False
+    return found
+
+
+find_targets_faster(test_values, test_targets)
+        
